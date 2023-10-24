@@ -7,7 +7,7 @@ int main()
     int maxAge = 0;
     int minAge = 0;
     double sumage = 0;
-    double avg;
+    double avg = 0;
     int amount;
 
     setlocale(LC_ALL, "RU");
@@ -17,15 +17,16 @@ int main()
         cout << "\n Введите возраст посетителя " << (i + 1) << " -го посетителя \n" << endl;
         cin >> age;
 
-        if (age > maxAge)
+        if (i == 0 || age< minAge) {
+            minAge = age;
+        }
+        if (age > maxAge) {
             maxAge = age;
+        }
 
-        if (age < minAge);
-        minAge = age;
-
-        sumage += age;
+        avg+=age;
     }
-    avg = sumage / amount;
+    avg/=amount;
     cout << "Минимальный возраст посетителя нашего зала равен " << minAge << endl;
     cout << "Максимальный возраст посетителя нашего зала равен " << maxAge << endl;
     cout << "Cредний возраст посетителя нашего зала равен " << avg << endl;
