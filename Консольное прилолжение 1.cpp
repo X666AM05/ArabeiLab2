@@ -3,12 +3,12 @@
 using namespace std;
 int main()
 {
-    int age = 0;
+    int age;
     int maxAge = 0;
     int minAge = 0;
-    int sumage = 0;
-    int avg = 0;
-    int amount = 0;
+    double sumage = 0;
+    double avg;
+    int amount;
 
     setlocale(LC_ALL, "RU");
     cout << "Сколько человек посетило спортзал за один день?\n Введите ответ: \n" << endl;
